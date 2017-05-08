@@ -13,3 +13,6 @@ Once it ends, you can run it again to add more users, remove some of them or eve
 ### from
 https://github.com/Nyr/openvpn-install/
 
+### how to
+https://www.youtube.com/watch?v=04EmeXSZo_0&t=1545s
+
