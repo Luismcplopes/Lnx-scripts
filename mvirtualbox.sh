@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install build-essencial linux-headers-generic -y
 # montar o cd do virtualbox
