@@ -1,0 +1,16 @@
+## This UDF will extract the underlying address from a cell containing a Hyperlink 
+# The Code
+'''
+Function GetAddress(HyperlinkCell As Range)
+
+    GetAddress = Replace _
+
+    (HyperlinkCell.Hyperlinks(1).Address, "mailto:", "")
+
+End Function
+'''
+### To use this UDF push Alt+F11 and go Insert>Module and paste in the code. Push Alt+Q and save. The Function will appear under "User Defined" in the Paste Function dialog box (Shift+F3). Use the Function in any cell as shown below. 
+'''
+=GetAddress(A1)
+'''
+### Where cell A1 has a Hyperlink within it.
