@@ -6,13 +6,19 @@ This script will let you setup your own VPN server in no more than a minute, eve
 ### Installation
 Run the script and follow the assistant:
 
-`wget https://raw.githubusercontent.com/Luismcplopes/Lnx-scripts/master/openvpn/openvpn-install.sh -O openvpn-install.sh && bash openvpn-install.sh`
+`
+wget https://raw.githubusercontent.com/Luismcplopes/Lnx-scripts/master/openvpn/openvpn-install.sh -O openvpn-install.sh && bash openvpn-install.sh
+`
 
 Once it ends, you can run it again to add more users, remove some of them or even completely uninstall OpenVPN.
+
+### I want to run my own VPN but don't have a server for that
+You can get a little VPS for just $2.99/month at [Bandwagon Host](https://bandwagonhost.com/aff.php?aff=575&pid=12).
+
+You can get a little VPS for just $8/year at [AlphaRack](https://www.alpharacks.com/myrack/cart.php?a=confproduct&i=0).
 
 ### from
 https://github.com/Nyr/openvpn-install/
 
 ### how to
 https://www.youtube.com/watch?v=04EmeXSZo_0&t=1545s
-
