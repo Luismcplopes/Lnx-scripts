@@ -22,3 +22,8 @@ https://github.com/Nyr/openvpn-install/
 
 ### how to
 https://www.youtube.com/watch?v=04EmeXSZo_0&t=1545s
+
+
+https://www.youtube.com/watch?v=C7VYmaWjfvU
+
+https://www.youtube.com/watch?v=b7qr0laM8kA
