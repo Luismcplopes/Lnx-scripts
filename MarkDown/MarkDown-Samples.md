@@ -9,3 +9,4 @@
 ```
 [![Try in PWD](https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/alexellis/faas/master/docker-compose.yml&stack_name=func)
 ```
+[![Try elk in PWD](https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/Luismcplopes/elk-docker/master/docker-compose.yml&stack_name=func)
