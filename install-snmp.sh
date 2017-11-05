@@ -3,6 +3,7 @@
 #
 sudo apt-get install -y snmp snmpd &&
 sudo /etc/init.d/snmpd restart &&
+netstat -nl | grep -E "(local|161)" &&
 snmpwalk -v 2c -c  public localhost
 echo ################################################
 echo # notes:                                       #
