@@ -2,4 +2,7 @@
 
 **nota** usar para tornar exe chmod -x  *.sh
 
-https://raw.githubusercontent.com/Luismcplopes/Lnx-scripts/master/install-snmp.sh
+
+```
+wget  https://git.io/vFW7h -O install-snmp.sh && bash install-snmp.sh
+```
