@@ -15,4 +15,7 @@
 
 `curl -fsSL https://git.io/vFonT | sh`
 
+### 
+`curl -fsSL get.docker.com | sh`
+
 **nota** usar para tornar exe chmod -x  *.sh
