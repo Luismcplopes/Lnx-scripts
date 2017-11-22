@@ -10,3 +10,18 @@
 [![Try in PWD](https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/alexellis/faas/master/docker-compose.yml&stack_name=func)
 ```
 [![Try elk in PWD](https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/Luismcplopes/elk-docker/master/docker-compose.yml&stack_name=func)
+
+
+
+# anchors (also known as "internal links")
+
+- [Go to Section One](#sectionOne)
+- [Go to Section Two](#sectionTwo)
+
+<a name="sectionOne"></a>
+## My First Header ##
+This is some content in my first section.
+
+<a name="sectionTwo"></a>
+## My Second Header ##
+This is some content in my second section.
