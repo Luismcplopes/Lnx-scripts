@@ -1,4 +1,4 @@
-#Install ssh to Docker container
+# Install ssh to Docker container
 There have been quite a few debates on docker ssh whether it's a right approach or not. However, this tutorial is not about ssh but about Ansible. So, I stick to sshing to a container.
 ``` 
 # apt-get install openssh-server
