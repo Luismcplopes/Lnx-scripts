@@ -33,4 +33,7 @@
 ### Docker
 `curl -fsSL get.docker.com | sh`
 
+### Netdata
+`bash <(curl -Ss https://my-netdata.io/kickstart.sh) all`
+
 **nota** usar para tornar exe chmod -x  *.sh
