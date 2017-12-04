@@ -20,6 +20,16 @@
 
 `curl -fsSL https://git.io/vb3DU | sh`
 
+### Powersell on ubuntu1
+#### Ubuntu16
+`sudo wget https://git.io/vbst6 -O powersell-on-ubuntu16-install.sh  && sudo bash powersell-on-ubuntu16-install.sh`
+
+`curl -fsSL https://git.io/vbst6 | sh`
+#### Ubuntu14
+`sudo wget https://git.io/vbstz  -O powersell-on-ubuntu14-install.sh  && sudo bash powersell-on-ubuntu14-install.sh`
+
+`curl -fsSL https://git.io/vbstz | sh`
+
 ### Docker
 `curl -fsSL get.docker.com | sh`
 
