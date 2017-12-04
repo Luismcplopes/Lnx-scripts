@@ -15,7 +15,12 @@
 
 `curl -fsSL https://git.io/vFonT | sh`
 
-### 
+#### Using Ansible to control Windows 10 machines
+`sudo wget https://git.io/vb3DU  -O ansibel-on-win10.sh  && sudo bash ansibel-on-win10.sh`
+
+`curl -fsSL https://git.io/vb3DU | sh`
+
+### Docker
 `curl -fsSL get.docker.com | sh`
 
 **nota** usar para tornar exe chmod -x  *.sh
