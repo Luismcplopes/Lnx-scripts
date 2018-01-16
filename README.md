@@ -1,5 +1,8 @@
 # Lnx-scripts
 
+### spectre-meltdown-checker from https://github.com/speed47/spectre-meltdown-checker
+`curl -fsSL https://git.io/vNLij | sh`
+
 ### openvpn-install
 `wget https://git.io/vF72x -O openvpn-install.sh && bash openvpn-install.sh`
 
