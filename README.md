@@ -39,4 +39,7 @@
 ### Netdata
 `bash <(curl -Ss https://my-netdata.io/kickstart.sh) all`
 
+### RDP
+`curl -fsSL https://git.io/vNj1E | sh`
+
 **nota** usar para tornar exe chmod -x  *.sh
