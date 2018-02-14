@@ -1,5 +1,5 @@
 #!/bin/bash
-# OpenVPN road warrior installer for Debian, Ubuntu and CentOS
+# OpenVPN road warrior installer for Debian, Ubuntu and CentOS (Update on 14-02-2018)
 
 # This script will work on Debian, Ubuntu, CentOS and probably other distros
 # of the same families, although no support is offered for them. It isn't
@@ -113,7 +113,7 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 			CLIENT=$(tail -n +2 /etc/openvpn/easy-rsa/pki/index.txt | grep "^V" | cut -d '=' -f 2 | sed -n "$CLIENTNUMBER"p)
 			cd /etc/openvpn/easy-rsa/
 			./easyrsa --batch revoke $CLIENT
-			./easyrsa gen-crl
+			EASYRSA_CRL_DAYS=3650 ./easyrsa gen-crl
 			rm -rf pki/reqs/$CLIENT.req
 			rm -rf pki/private/$CLIENT.key
 			rm -rf pki/issued/$CLIENT.crt
@@ -141,7 +141,7 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 					firewall-cmd --direct --remove-rule ipv4 nat POSTROUTING 0 -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j SNAT --to $IP
 					firewall-cmd --permanent --direct --remove-rule ipv4 nat POSTROUTING 0 -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j SNAT --to $IP
 				else
-					IP=$(grep 'iptables -t nat -A POSTROUTING -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j SNAT --to ' $RCLOCAL | cut -d " " -f 11)
+					IP=$(grep 'iptables -t nat -A POSTROUTING -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j SNAT --to ' $RCLOCAL | cut -d " " -f 14)
 					iptables -t nat -D POSTROUTING -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j SNAT --to $IP
 					sed -i '/iptables -t nat -A POSTROUTING -s 10.8.0.0\/24 ! -d 10.8.0.0\/24 -j SNAT --to /d' $RCLOCAL
 					if iptables -L -n | grep -qE '^ACCEPT'; then
@@ -161,12 +161,11 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 					fi
 				fi
 				if [[ "$OS" = 'debian' ]]; then
-					apt-get remove --purge -y openvpn openvpn-blacklist
+					apt-get remove --purge -y openvpn
 				else
 					yum remove openvpn -y
 				fi
 				rm -rf /etc/openvpn
-				rm -rf /usr/share/doc/openvpn*
 				echo ""
 				echo "OpenVPN removed!"
 			else
@@ -234,12 +233,12 @@ else
 		rm -rf /etc/openvpn/easy-rsa/
 	fi
 	# Get easy-rsa
-	wget -O ~/EasyRSA-3.0.1.tgz "https://github.com/OpenVPN/easy-rsa/releases/download/3.0.1/EasyRSA-3.0.1.tgz"
-	tar xzf ~/EasyRSA-3.0.1.tgz -C ~/
-	mv ~/EasyRSA-3.0.1/ /etc/openvpn/
-	mv /etc/openvpn/EasyRSA-3.0.1/ /etc/openvpn/easy-rsa/
+	wget -O ~/EasyRSA-3.0.4.tgz "https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.4/EasyRSA-3.0.4.tgz"
+	tar xzf ~/EasyRSA-3.0.4.tgz -C ~/
+	mv ~/EasyRSA-3.0.4/ /etc/openvpn/
+	mv /etc/openvpn/EasyRSA-3.0.4/ /etc/openvpn/easy-rsa/
 	chown -R root:root /etc/openvpn/easy-rsa/
-	rm -rf ~/EasyRSA-3.0.1.tgz
+	rm -rf ~/EasyRSA-3.0.4.tgz
 	cd /etc/openvpn/easy-rsa/
 	# Create the PKI, set up the CA, the DH params and the server + client certificates
 	./easyrsa init-pki
@@ -247,9 +246,9 @@ else
 	./easyrsa gen-dh
 	./easyrsa build-server-full server nopass
 	./easyrsa build-client-full $CLIENT nopass
-	./easyrsa gen-crl
+	EASYRSA_CRL_DAYS=3650 ./easyrsa gen-crl
 	# Move the stuff we need
-	cp pki/ca.crt pki/private/ca.key pki/dh.pem pki/issued/server.crt pki/private/server.key /etc/openvpn/easy-rsa/pki/crl.pem /etc/openvpn
+	cp pki/ca.crt pki/private/ca.key pki/dh.pem pki/issued/server.crt pki/private/server.key pki/crl.pem /etc/openvpn
 	# CRL is read with each client connection, when OpenVPN is dropped to nobody
 	chown nobody:$GROUPNAME /etc/openvpn/crl.pem
 	# Generate key for tls-auth
@@ -264,6 +263,7 @@ ca ca.crt
 cert server.crt
 key server.key
 dh dh.pem
+auth SHA512
 tls-auth ta.key 0
 topology subnet
 server 10.8.0.0 255.255.255.0
@@ -272,8 +272,15 @@ ifconfig-pool-persist ipp.txt" > /etc/openvpn/server.conf
 	# DNS
 	case $DNS in
 		1) 
+		# Locate the proper resolv.conf
+		# Needed for systems running systemd-resolved
+		if grep -q "127.0.0.53" "/etc/resolv.conf"; then
+			RESOLVCONF='/run/systemd/resolve/resolv.conf'
+		else
+			RESOLVCONF='/etc/resolv.conf'
+		fi
 		# Obtain the resolvers from resolv.conf and use them for OpenVPN
-		grep -v '#' /etc/resolv.conf | grep 'nameserver' | grep -E -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | while read line; do
+		grep -v '#' $RESOLVCONF | grep 'nameserver' | grep -E -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | while read line; do
 			echo "push \"dhcp-option DNS $line\"" >> /etc/openvpn/server.conf
 		done
 		;;
@@ -402,6 +409,7 @@ nobind
 persist-key
 persist-tun
 remote-cert-tls server
+auth SHA512
 cipher AES-256-CBC
 comp-lzo
 setenv opt block-outside-dns
