@@ -46,3 +46,6 @@
 `curl -fsSL https://git.io/vNj1A  | sh`
 
 **nota** usar para tornar exe chmod -x  *.sh
+
+
+- https://www.shellcheck.net
