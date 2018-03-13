@@ -1,5 +1,5 @@
 # Lnx-scripts
-
+[toc]
 ### spectre-meltdown-checker from https://github.com/speed47/spectre-meltdown-checker
 `curl -fsSL https://git.io/vNLij | sh`
 
