@@ -1,21 +1,21 @@
 # Lnx-scripts
 
 
-
 - [Lnx-scripts](#lnx-scripts)
-        - [asciinema from https://asciinema.org](#asciinema-from-httpsasciinemaorg)
-        - [spectre-meltdown-checker from https://github.com/speed47/spectre-meltdown-checker](#spectre-meltdown-checker-from-httpsgithubcomspeed47spectre-meltdown-checker)
-        - [openvpn-install](#openvpn-install)
-        - [SNMP Service](#snmp-service)
-        - [Ansible](#ansible)
-            - [Using Ansible to control Windows 10 machines](#using-ansible-to-control-windows-10-machines)
-        - [Powersell on ubuntu1](#powersell-on-ubuntu1)
-            - [Ubuntu16](#ubuntu16)
-            - [Ubuntu14](#ubuntu14)
-        - [Docker](#docker)
-        - [Netdata](#netdata)
-        - [RDP](#rdp)
-        - [KODI](#kodi)
+- [asciinema from https://asciinema.org](#asciinema-from-httpsasciinemaorg)
+- [spectre-meltdown-checker from https://github.com/speed47/spectre-meltdown-checker](#spectre-meltdown-checker-from-httpsgithubcomspeed47spectre-meltdown-checker)
+- [openvpn-install](#openvpn-install)
+- [SNMP Service](#snmp-service)
+- [Ansible](#ansible)
+- [Using Ansible to control Windows 10 machines](#using-ansible-to-control-windows-10-machines)
+- [Powersell on ubuntu1](#powersell-on-ubuntu1)
+   - [Ubuntu16](#ubuntu16)
+   - [Ubuntu14](#ubuntu14)
+- [Docker](#docker)
+- [Netdata](#netdata)
+- [RDP](#rdp)
+- [KODI](#kodi)
+
 
 
 
