@@ -7,7 +7,7 @@
 - [Ansible](#ansible)
    - [Using Ansible to control Windows 10 machines](#using-ansible-to-control-windows-10-machines)
 - [Powersell on ubuntu](#powersell-on-ubuntu)
-   - [ Ubuntu 16.04](# Ubuntu 16.04)
+   - [Ubuntu 16.04](#Ubuntu 16.04)
    - [Ubuntu 14.04](#ubuntu 14.04)
 - [Docker](#docker)
 - [Netdata](#netdata)
