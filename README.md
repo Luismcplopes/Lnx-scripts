@@ -6,9 +6,9 @@
 - [SNMP Service](#snmp-service)
 - [Ansible](#ansible)
    - [Using Ansible to control Windows 10 machines](#using-ansible-to-control-windows-10-machines)
-- [Powersell on ubuntu1](#powersell-on-ubuntu1)
-   - [Ubuntu16](#ubuntu16)
-   - [Ubuntu14](#ubuntu14)
+- [Powersell on ubuntu](#powersell-on-ubuntu)
+   - [ Ubuntu 16.04](# Ubuntu 16.04)
+   - [Ubuntu 14.04](#ubuntu 14.04)
 - [Docker](#docker)
 - [Netdata](#netdata)
 - [RDP](#rdp)
@@ -44,12 +44,12 @@
 
 `curl -fsSL https://git.io/vb3DU | sh`
 
-### Powersell on ubuntu1
-#### Ubuntu16
+### Powersell on ubuntu
+#### Ubuntu 16.04
 `sudo wget https://git.io/vbst6 -O powersell-on-ubuntu16-install.sh  && sudo bash powersell-on-ubuntu16-install.sh`
 
 `curl -fsSL https://git.io/vbst6 | sh`
-#### Ubuntu14
+#### Ubuntu 14.04
 `sudo wget https://git.io/vbstz  -O powersell-on-ubuntu14-install.sh  && sudo bash powersell-on-ubuntu14-install.sh`
 
 `curl -fsSL https://git.io/vbstz | sh`
