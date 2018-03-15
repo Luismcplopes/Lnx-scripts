@@ -1,19 +1,19 @@
 # Lnx-scripts
 
+- [Lnx-scripts](#lnx-scripts)
 - [asciinema from https://asciinema.org](#asciinema-from-httpsasciinemaorg)
 - [spectre-meltdown-checker from https://github.com/speed47/spectre-meltdown-checker](#spectre-meltdown-checker-from-httpsgithubcomspeed47spectre-meltdown-checker)
 - [openvpn-install](#openvpn-install)
 - [SNMP Service](#snmp-service)
 - [Ansible](#ansible)
-   - [Using Ansible to control Windows 10 machines](#using-ansible-to-control-windows-10-machines)
+- [Using Ansible to control Windows 10 machines](#using-ansible-to-control-windows-10-machines)
 - [Powersell on ubuntu](#powersell-on-ubuntu)
-   - [Ubuntu 16.04](#Ubuntu 16.04)
-   - [Ubuntu 14.04](#ubuntu 14.04)
+   - [Ubuntu16](#ubuntu16)
+   - [Ubuntu14](#ubuntu14)
 - [Docker](#docker)
 - [Netdata](#netdata)
 - [RDP](#rdp)
 - [KODI](#kodi)
-
 
 
 
@@ -45,11 +45,11 @@
 `curl -fsSL https://git.io/vb3DU | sh`
 
 ### Powersell on ubuntu
-#### Ubuntu 16.04
+#### Ubuntu16
 `sudo wget https://git.io/vbst6 -O powersell-on-ubuntu16-install.sh  && sudo bash powersell-on-ubuntu16-install.sh`
 
 `curl -fsSL https://git.io/vbst6 | sh`
-#### Ubuntu 14.04
+#### Ubuntu14
 `sudo wget https://git.io/vbstz  -O powersell-on-ubuntu14-install.sh  && sudo bash powersell-on-ubuntu14-install.sh`
 
 `curl -fsSL https://git.io/vbstz | sh`
