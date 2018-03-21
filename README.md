@@ -70,3 +70,8 @@
 
 
 - https://www.shellcheck.net
+
+#### **Markdown#**
+ - Markdown Basics: [https://help.github.com/articles/markdown-basics/](https://help.github.com/articles/markdown-basics/)
+ - Markdown Syntax: [http://daringfireball.net/projects/markdown/syntax](http://daringfireball.net/projects/markdown/syntax)
+ - Table Generator: [http://www.tablesgenerator.com/markdown_tables](http://www.tablesgenerator.com/markdown_tables)
