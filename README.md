@@ -70,6 +70,8 @@
 
 
 - https://www.shellcheck.net
+- https://crontab.guru/
+- http://ezprompt.net/
 
 #### **Markdown#**
  - Markdown Basics: [https://help.github.com/articles/markdown-basics/](https://help.github.com/articles/markdown-basics/)
