@@ -70,7 +70,7 @@
 
 
 - https://www.shellcheck.net
-- https://crontab.guru/
+- https://crontab.guru/ or https://devhints.io/cron
 - http://ezprompt.net/
 
 #### **Markdown#**
