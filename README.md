@@ -45,6 +45,9 @@
 `curl -fsSL https://git.io/vb3DU | sh`
 
 ### Powersell on ubuntu
+#### Ubuntu18
+`sudo curl https://git.io/fNZZC | sh`
+
 #### Ubuntu16
 `sudo wget https://git.io/vbst6 -O powersell-on-ubuntu16-install.sh  && sudo bash powersell-on-ubuntu16-install.sh`
 
