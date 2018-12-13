@@ -25,3 +25,25 @@ This is some content in my first section.
 <a name="sectionTwo"></a>
 ## My Second Header ##
 This is some content in my second section.
+
+
+## Contributing
+
+Here's how to contribute to this cheat sheet.
+
+### Open README.md
+
+Click [README.md](https://github.com/wsargent/docker-cheat-sheet/blob/master/README.md) <-- this link
+
+![Click This](images/click.png)
+
+### Edit Page
+
+![Edit This](images/edit.png)
+
+### Make Changes and Commit
+
+![Change This](images/change.png)
+
+![Commit](images/commit.png)
+
