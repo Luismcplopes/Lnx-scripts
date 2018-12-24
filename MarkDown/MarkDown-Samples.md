@@ -1,3 +1,21 @@
+ [![Docker Stars](https://img.shields.io/docker/stars/jrottenberg/ffmpeg.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/jrottenberg/ffmpeg/stars/count/) [![Docker pulls](https://img.shields.io/docker/pulls/jrottenberg/ffmpeg.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/jrottenberg/ffmpeg/)
+[![Travis](https://img.shields.io/travis/jrottenberg/ffmpeg/master.svg?maxAge=300?style=plastic)](https://travis-ci.org/jrottenberg/ffmpeg)
+[![Build Status](https://dev.azure.com/video-tools/ffmpeg/_apis/build/status/jrottenberg.ffmpeg)](https://dev.azure.com/video-tools/ffmpeg/_build/latest?definitionId=1)
+[![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg?maxAge=2592000?style=plastic)](https://github.com/jrottenberg/ffmpeg/)
+
+.. image:: https://img.shields.io/travis/scrapinghub/splash/master.svg
+   :alt: Build Status
+   :target: https://travis-ci.org/scrapinghub/splash
+
+.. image:: https://img.shields.io/codecov/c/github/scrapinghub/splash/master.svg
+   :alt: Coverage report
+   :target: http://codecov.io/github/scrapinghub/splash?branch=master
+
+.. image:: https://img.shields.io/badge/GITTER-join%20chat-green.svg
+   :alt: Join the chat at https://gitter.im/scrapinghub/splash
+   :target: https://gitter.im/scrapinghub/splash
+
+
 # MarkDown Samples
 
 
